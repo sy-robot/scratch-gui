@@ -46,7 +46,113 @@ import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
 import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
+import tm2scratchIconURL from './tm2scratch/tm2scratch.png';
+import tm2scratchInsetIconURL from './tm2scratch/tm2scratch-small.png';
+
+import tmpose2scratchIconURL from './tmpose2scratch/tmpose2scratch.png';
+import tmpose2scratchInsetIconURL from './tmpose2scratch/tmpose2scratch-small.png';
+
+import dochiIconURL from './dochi/dochi.png';
+import dochiInsetIconURL from './dochi/dochi-small.svg';
+
+import edubotIconURL from './edubot/syrobot.png';
+import edubotInsetIconURL from './edubot/syrobot-6colors-120.png';
+import edubotConnectionIconURL from './edubot/syrobot-120.svg';
+import edubotConnectionSmallIconURL from './edubot/syrobot-40.svg';
+
 export default [
+    {
+        name: 'SYRobot',
+        extensionId: 'edubot',
+        collaborator: '에스와이알, SYRobot',
+        iconURL: edubotIconURL,
+        insetIconURL: edubotInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage='SYRobot Scratch Extension'
+                description='SYRobot Scratch Extension'
+                id='gui.extension.edubot.description'
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: true,
+        internetConnectionRequired: true,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        // connectionIconURL: ev3ConnectionIconURL,
+        // connectionSmallIconURL: ev3ConnectionSmallIconURL,
+        connectionIconURL:edubotConnectionIconURL,
+        connectionSmallIconURL:edubotConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting. Make sure SYRobot BLE mode."
+                description="Message to help people connect to their EV3. Must note the PIN should be 1234."
+                //id="gui.extension.ev3.connectingMessage"
+                id="gui.extension.edubot.connectingMessage"
+            />
+        ),
+        helpLink: 'https://syrobot.co.kr'
+
+    },
+    {
+        name: 'dochi',
+        extensionId: 'dochi',
+        collaborator: 'SYRobot',
+        iconURL: dochiIconURL,
+        insetIconURL: dochiInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage='Control Dochi Robot.'
+                description='Control Dochi Robot.'
+                id='gui.extension.dochiblocks.description'
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: true,
+        internetConnectionRequired: false,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        helpLink: 'https://champierre.github.io/dochi/'
+    },
+    {
+        name: 'TMPose2Scratch',
+        extensionId: 'tmpose2scratch',
+        collaborator: '에스와이알,  SYRobot',
+        iconURL: tmpose2scratchIconURL,
+        insetIconURL: tmpose2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage='티처블머신 - 인공지능 포즈 분류。'
+                description='티처블머신 - 인공지능 포즈 분류。'
+                id='gui.extension.tmpose2scratchblocks.description'
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false
+    },
+    {
+        name: 'TM2Scratch',
+        extensionId: 'tm2scratch',
+        collaborator: '에스와이알,  SYRobot',
+        iconURL: tm2scratchIconURL,
+        insetIconURL: tm2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage='티처블머신 - 인공지능 영상/ 음성 분류。'
+                description='티처블머신 - 인공지능 영상/ 음성 분류。'
+                id='gui.extension.tm2scratchblocks.description'
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false
+    },
     {
         name: (
             <FormattedMessage
